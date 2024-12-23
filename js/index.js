@@ -1,5 +1,5 @@
 "use strict"
-
+/*
 console.log(10 + 14);         // Output: 24
 console.log(250 - 50);        // Output: 200
 console.log(34 + "1");        // Output: 341
@@ -24,11 +24,13 @@ console.log(12 && 12);         // Output: true
 
 
 console.log((10+12) && (12 * 2)) // Output: 24
-        /*The && operator evaluates two expressions and returns the value of the second expression if both are true. If the first expression is false, returns the value of the first expression.
-        In JavaScript, any non-zero number is considered true.
-        Since (10 + 12) is 22 (truthy) and (12 * 2) is 24 (truthy), the && operator returns the value of the second expression, which is 24.*/
+        // The && operator evaluates two expressions and returns the value of the second expression if both are true. If the first expression is false, returns the value of the first expression.
+        // In JavaScript, any non-zero number is considered true.
+        // Since (10 + 12) is 22 (truthy) and (12 * 2) is 24 (truthy), the && operator returns the value of the second expression, which is 24.
 
 console.log((10+12) || (12 * 2)) // Output: 22
-        /*The || operator evaluates two expressions and returns the value of the first expression if it is true. If the first expression is false, returns the value of the second expression.
-        In JavaScript, any non-zero number is considered true.
-        Since (10 + 12) is 22 (truthy), the || operator returns the value of the first expression, which is 22.*/
+        // The || operator evaluates two expressions and returns the value of the first expression if it is true. If the first expression is false, returns the value of the second expression.
+        // In JavaScript, any non-zero number is considered true.
+        // Since (10 + 12) is 22 (truthy), the || operator returns the value of the first expression, which is 22.
+
+*/
