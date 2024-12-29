@@ -1,0 +1,37 @@
+- Explain why a number data type added to a string data type returns a string:
+    When a number data type is added to a string data type, the number is automatically converted 
+    into a string because concatenation is the default operation when working with strings. 
+    This is due to implicit type coercion, where the interpreter assumes you want to create a single 
+    string, and it treats the number as part of the text.
+
+- Name a scenario where using the == operator could cause a bug?
+    Using the == operator can cause a bug when comparing values with different types in JavaScript because 
+    it performs type coercion. For example:
+    
+    ```javascript
+    let value1 = '5';
+    let value2 = 5;
+
+    if (value1 == value2) {
+        console.log('They are equal');
+    } else {
+        console.log('They are not equal');
+    }
+    ```
+    In this example, the output will be 'They are equal' because the == operator converts the string '5' to 
+    the number 5 before comparison. This can lead to unexpected behavior. A better practice is to use the 
+    === operator, which checks both the value and type to avoid unintended behavior.
+
+- Name the operator(s) that you find confusing and explain why?
+    The ?? (Nullish Coalescing Operator) can be confusing because it behaves similarly to the || (Logical OR) operator 
+    but with subtle differences. ?? only considers null or undefined as "falsy" values, while || treats any falsy value 
+    (like 0, "", or false) as a trigger to evaluate the second operand. This distinction might be tricky for beginners or 
+    developers transitioning between languages.
+
+- Explain a situation where you would use the Modulus operator and why?
+    The Modulus operator (%) is useful for determining if a number is divisible by another number. For example, to check if a 
+    number is even or odd:
+    if (number % 2 === 0) indicates the number is even, 
+    while if (number % 2 !== 0) indicates it's odd. 
+    This operator is also used in cyclic operations, like resetting an index in a loop when it reaches a maximum value.
+  

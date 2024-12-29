@@ -78,10 +78,6 @@ code {
     flex-direction: column;
 }
 
-.title {
-    
-}
-
 .sub-title {
     padding: 0 1rem;
 }
@@ -94,7 +90,7 @@ code {
     display: block;
     white-space: pre-wrap;
     line-height: 1.5;
-    margin: .5rem 1rem;
+    margin: .5rem 0;
 }
 
 .inline-code {
@@ -135,4 +131,11 @@ code {
 
 .text-link {
     text-decoration: underline;
+}
+.answer {
+    background-color: var(--clr-surface-tonal-a20);
+    text-align: left;
+    text-wrap: wrap;
+    padding: 0.5rem 1rem;
+    display: none;
 }

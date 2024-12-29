@@ -23,10 +23,53 @@
 
             <p class="definition">
                 <ul class="list">
-                    <li class="list-item">Explain why a number data type added to a string data type returns a string.</li>
-                    <li class="list-item">Name a scenario where using the <code class="inline-code">==</code> operator could cause a bug.</li>
-                    <li class="list-item">Name the operator(s) that you find confusing and explain why.</li>
-                    <li class="list-item">Explain a situation where you would use the Modulus operator and why.</li>
+                    <li class="list-item">Explain why a number data type added to a string data type returns a string.
+                        <div class="answer">
+                            <p>
+                                When a number data type is added to a string data type, the number is automatically converted into a string because concatenation is the default operation when working with strings. <br>This is due to implicit type coercion, where the interpreter assumes you want to create a single string, and it treats the number as part of the text.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list-item">Name a scenario where using the <code class="inline-code">==</code> operator could cause a bug.
+                     <div class="answer">
+                            Using the <code class="inline-code">==</code> operator can cause a bug when comparing values with different types in JavaScript because it performs type coercion. <br> For example:
+                            <code class="block-code">
+                                ```javascript
+                                let value1 = '5';
+                                let value2 = 5;
+                            
+                                if (value1 == value2) {
+                                    console.log('They are equal');
+                                } else {
+                                    console.log('They are not equal');
+                                }
+                            </code>
+                            <p> In this example, the output will be 'They are equal' because the <code class="inline-code">==</code> operator converts the string '5' to the number 5 before comparison. This can lead to unexpected behavior.<br>
+                                A better practice is to use the <code class="inline-code">===</code> operator, which checks both the value and type to avoid unintended behavior.</p>
+                        </p>
+                     </div>
+                    </li>
+                    <li class="list-item">Name the operator(s) that you find confusing and explain why.
+                        <div class="answer">
+                            <p>
+                                The <code class="inline-code">??</code> (Nullish Coalescing Operator) can be confusing because it behaves similarly to the <code class="inline-code">||</code> (Logical OR) operator but with subtle differences.<br>
+                                <code class="inline-code">??</code> only considers null or undefined as "falsy" values, while <code class="inline-code">||</code> treats any falsy value (like 0, "", or false) as a trigger to evaluate the second operand. This distinction might be tricky for beginners or developers transitioning between languages.
+                            </p>
+                        </div>
+
+                    </li>
+                    <li class="list-item">Explain a situation where you would use the Modulus operator and why.
+                        <div class="answer">
+                            The Modulus operator <code class="inline-code">%</code> is useful for determining if a number is divisible by another number. <br>For example, to check if a number is even or odd:
+                            <code class="block-code">
+                                ```javascript
+                                (number % 2 === 0) // indicates the number is even. 
+                                (number % 2 !== 0) // indicates it's odd. 
+                            </code>
+                            <p>This operator is also used in cyclic operations, like resetting an index in a loop when it reaches a maximum value.</p>
+                        </p>
+                     </div>
+                    </li>
                     
                 </ul>
             </p>
